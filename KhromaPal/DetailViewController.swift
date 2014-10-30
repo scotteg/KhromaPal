@@ -22,7 +22,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UISplitViewControllerDelegate {
+class DetailViewController: UIViewController {
 
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet var colorLabels: [UILabel]!
@@ -72,20 +72,7 @@ class DetailViewController: UIViewController, UISplitViewControllerDelegate {
     // Do any additional setup after loading the view, typically from a nib.
     self.configureView()
   }
-  
-  // #pragma mark - Split view
-  func splitViewController(splitController: UISplitViewController, willHideViewController viewController: UIViewController, withBarButtonItem barButtonItem: UIBarButtonItem, forPopoverController popoverController: UIPopoverController) {
-    barButtonItem.title = "Palettes"
-    self.navigationItem.setLeftBarButtonItem(barButtonItem, animated: true)
-    self.masterPopoverController = popoverController
-  }
-  
-  func splitViewController(splitController: UISplitViewController, willShowViewController viewController: UIViewController, invalidatingBarButtonItem barButtonItem: UIBarButtonItem) {
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
-    self.navigationItem.setLeftBarButtonItem(nil, animated: true)
-    self.masterPopoverController = nil
-  }
-  
+    
   // Private methods
   private func makeAllContentHidden(hidden: Bool) {
     for subview in view.subviews as [UIView] {

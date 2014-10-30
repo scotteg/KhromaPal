@@ -11,8 +11,7 @@
 		2220645F1967336E00BD4FBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2220645E1967336E00BD4FBC /* CoreGraphics.framework */; };
 		222064611967336E00BD4FBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222064601967336E00BD4FBC /* UIKit.framework */; };
 		222064671967336E00BD4FBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 222064651967336E00BD4FBC /* InfoPlist.strings */; };
-		222064701967336E00BD4FBC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2220646E1967336E00BD4FBC /* Main_iPhone.storyboard */; };
-		222064731967336E00BD4FBC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222064711967336E00BD4FBC /* Main_iPad.storyboard */; };
+		222064731967336E00BD4FBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222064711967336E00BD4FBC /* Main.storyboard */; };
 		2220647B1967336E00BD4FBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2220647A1967336E00BD4FBC /* Images.xcassets */; };
 		222064821967336E00BD4FBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222064811967336E00BD4FBC /* XCTest.framework */; };
 		222064831967336E00BD4FBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2220645C1967336E00BD4FBC /* Foundation.framework */; };
@@ -29,6 +28,8 @@
 		22BE30351967521700772605 /* Colours.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BE30341967521700772605 /* Colours.m */; };
 		22BE30371967609100772605 /* DefaultColourSwatchCollection.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22BE30361967609100772605 /* DefaultColourSwatchCollection.plist */; };
 		22D21E3719C896030090A99A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D21E3619C896030090A99A /* LaunchScreen.xib */; };
+		D24E6EC51A0252C600CF2510 /* TraitOverrideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E6EC41A0252C600CF2510 /* TraitOverrideViewController.swift */; };
+		D24E6EC71A0254DC00CF2510 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E6EC61A0254DC00CF2510 /* SplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,7 @@
 		222064601967336E00BD4FBC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		222064641967336E00BD4FBC /* KhromaPal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KhromaPal-Info.plist"; sourceTree = "<group>"; };
 		222064661967336E00BD4FBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2220646F1967336E00BD4FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		222064721967336E00BD4FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		222064721967336E00BD4FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2220647A1967336E00BD4FBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		222064801967336E00BD4FBC /* KhromaPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KhromaPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222064811967336E00BD4FBC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -68,6 +68,8 @@
 		22BE30341967521700772605 /* Colours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colours.m; sourceTree = "<group>"; };
 		22BE30361967609100772605 /* DefaultColourSwatchCollection.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultColourSwatchCollection.plist; sourceTree = "<group>"; };
 		22D21E3619C896030090A99A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		D24E6EC41A0252C600CF2510 /* TraitOverrideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitOverrideViewController.swift; sourceTree = "<group>"; };
+		D24E6EC61A0254DC00CF2510 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,14 +133,15 @@
 				22BE302819674A6F00772605 /* DataLayer */,
 				22B5FFB319C4908C000936D2 /* Protocols */,
 				22BE302919674A6F00772605 /* Extensions */,
-				2220646E1967336E00BD4FBC /* Main_iPhone.storyboard */,
-				222064711967336E00BD4FBC /* Main_iPad.storyboard */,
+				222064711967336E00BD4FBC /* Main.storyboard */,
 				2220647A1967336E00BD4FBC /* Images.xcassets */,
 				222064631967336E00BD4FBC /* Supporting Files */,
 				22BE2FF2196734C300772605 /* AppDelegate.swift */,
 				22BE2FF619673AFF00772605 /* MasterViewController.swift */,
 				22BE30251967468E00772605 /* DetailViewController.swift */,
 				22D21E3619C896030090A99A /* LaunchScreen.xib */,
+				D24E6EC41A0252C600CF2510 /* TraitOverrideViewController.swift */,
+				D24E6EC61A0254DC00CF2510 /* SplitViewController.swift */,
 			);
 			path = KhromaPal;
 			sourceTree = "<group>";
@@ -283,10 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222064731967336E00BD4FBC /* Main_iPad.storyboard in Resources */,
+				222064731967336E00BD4FBC /* Main.storyboard in Resources */,
 				22BE30371967609100772605 /* DefaultColourSwatchCollection.plist in Resources */,
 				2220647B1967336E00BD4FBC /* Images.xcassets in Resources */,
-				222064701967336E00BD4FBC /* Main_iPhone.storyboard in Resources */,
 				22D21E3719C896030090A99A /* LaunchScreen.xib in Resources */,
 				222064671967336E00BD4FBC /* InfoPlist.strings in Resources */,
 			);
@@ -312,8 +314,10 @@
 				22BE302F19674CC400772605 /* ColorPaletteCollection.swift in Sources */,
 				22BE30261967468E00772605 /* DetailViewController.swift in Sources */,
 				22BE2FF3196734C300772605 /* AppDelegate.swift in Sources */,
+				D24E6EC71A0254DC00CF2510 /* SplitViewController.swift in Sources */,
 				22BE303119674ECF00772605 /* ColorPaletteProvider.swift in Sources */,
 				22BE30351967521700772605 /* Colours.m in Sources */,
+				D24E6EC51A0252C600CF2510 /* TraitOverrideViewController.swift in Sources */,
 				22BE302D19674C8D00772605 /* PaletteTreeNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,20 +349,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2220646E1967336E00BD4FBC /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2220646F1967336E00BD4FBC /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		222064711967336E00BD4FBC /* Main_iPad.storyboard */ = {
+		222064711967336E00BD4FBC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				222064721967336E00BD4FBC /* Base */,
 			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		2220648A1967336E00BD4FBC /* InfoPlist.strings */ = {
