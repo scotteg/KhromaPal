@@ -30,6 +30,10 @@
 		22D21E3719C896030090A99A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22D21E3619C896030090A99A /* LaunchScreen.xib */; };
 		D24E6EC51A0252C600CF2510 /* TraitOverrideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E6EC41A0252C600CF2510 /* TraitOverrideViewController.swift */; };
 		D24E6EC71A0254DC00CF2510 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24E6EC61A0254DC00CF2510 /* SplitViewController.swift */; };
+		D2ACD4631A0573EA00C8BC75 /* PaletteContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACD4621A0573EA00C8BC75 /* PaletteContainer.swift */; };
+		D2ACD4651A0574E100C8BC75 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACD4641A0574E100C8BC75 /* NavigationController.swift */; };
+		D2ACD4671A0582B900C8BC75 /* UIViewControllerShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACD4661A0582B900C8BC75 /* UIViewControllerShow.swift */; };
+		D2ACD4691A0587D500C8BC75 /* NoPaletteSelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2ACD4681A0587D500C8BC75 /* NoPaletteSelectedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		22D21E3619C896030090A99A /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		D24E6EC41A0252C600CF2510 /* TraitOverrideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitOverrideViewController.swift; sourceTree = "<group>"; };
 		D24E6EC61A0254DC00CF2510 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		D2ACD4621A0573EA00C8BC75 /* PaletteContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaletteContainer.swift; sourceTree = SOURCE_ROOT; };
+		D2ACD4641A0574E100C8BC75 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		D2ACD4661A0582B900C8BC75 /* UIViewControllerShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerShow.swift; sourceTree = "<group>"; };
+		D2ACD4681A0587D500C8BC75 /* NoPaletteSelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoPaletteSelectedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,8 @@
 				22D21E3619C896030090A99A /* LaunchScreen.xib */,
 				D24E6EC41A0252C600CF2510 /* TraitOverrideViewController.swift */,
 				D24E6EC61A0254DC00CF2510 /* SplitViewController.swift */,
+				D2ACD4641A0574E100C8BC75 /* NavigationController.swift */,
+				D2ACD4681A0587D500C8BC75 /* NoPaletteSelectedViewController.swift */,
 			);
 			path = KhromaPal;
 			sourceTree = "<group>";
@@ -176,6 +186,7 @@
 		22B5FFB319C4908C000936D2 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D2ACD4621A0573EA00C8BC75 /* PaletteContainer.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 		22BE302919674A6F00772605 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D2ACD4661A0582B900C8BC75 /* UIViewControllerShow.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -310,15 +322,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				22BE302B19674A9D00772605 /* ColorPalette.swift in Sources */,
+				D2ACD4651A0574E100C8BC75 /* NavigationController.swift in Sources */,
 				22BE2FF719673AFF00772605 /* MasterViewController.swift in Sources */,
 				22BE302F19674CC400772605 /* ColorPaletteCollection.swift in Sources */,
+				D2ACD4671A0582B900C8BC75 /* UIViewControllerShow.swift in Sources */,
 				22BE30261967468E00772605 /* DetailViewController.swift in Sources */,
 				22BE2FF3196734C300772605 /* AppDelegate.swift in Sources */,
 				D24E6EC71A0254DC00CF2510 /* SplitViewController.swift in Sources */,
 				22BE303119674ECF00772605 /* ColorPaletteProvider.swift in Sources */,
 				22BE30351967521700772605 /* Colours.m in Sources */,
+				D2ACD4691A0587D500C8BC75 /* NoPaletteSelectedViewController.swift in Sources */,
 				D24E6EC51A0252C600CF2510 /* TraitOverrideViewController.swift in Sources */,
 				22BE302D19674C8D00772605 /* PaletteTreeNode.swift in Sources */,
+				D2ACD4631A0573EA00C8BC75 /* PaletteContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

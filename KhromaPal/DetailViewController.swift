@@ -22,23 +22,21 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-
+class DetailViewController: UIViewController, PaletteDisplayContainer {
+  
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet var colorLabels: [UILabel]!
-  
   var masterPopoverController: UIPopoverController? = nil
   
-  
   var colorPalette: ColorPalette? {
-  didSet {
-    // Update the view.
-    self.configureView()
-    
-    if self.masterPopoverController != nil {
-      self.masterPopoverController!.dismissPopoverAnimated(true)
+    didSet {
+      // Update the view.
+      self.configureView()
+      
+      if self.masterPopoverController != nil {
+        self.masterPopoverController!.dismissPopoverAnimated(true)
+      }
     }
-  }
   }
   
   private func configureView() {
@@ -63,6 +61,9 @@ class DetailViewController: UIViewController {
         titleLabel.textColor = middleColor.blackOrWhiteContrastingColor().colorWithAlphaComponent(0.6)
       }
     } else {
+      if let empty = storyboard?.instantiateViewControllerWithIdentifier("NoPaletteSelected") as? UIViewController {
+        showViewController(empty, sender: self)
+      }
       makeAllContentHidden(true)
     }
   }
@@ -72,7 +73,18 @@ class DetailViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     self.configureView()
   }
-    
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    if let svc = splitViewController {
+      if !svc.collapsed {
+        navigationItem.setLeftBarButtonItem(svc.displayModeButtonItem(), animated: true)
+        navigationItem.leftItemsSupplementBackButton = true
+        navigationItem.hidesBackButton = false
+      }
+    }
+  }
+  
   // Private methods
   private func makeAllContentHidden(hidden: Bool) {
     for subview in view.subviews as [UIView] {
@@ -83,4 +95,9 @@ class DetailViewController: UIViewController {
     }
   }
 
+  // MARK: - PaletteDisplayContainer
+  
+  func currentlyDisplayedPallette() -> ColorPalette? {
+    return colorPalette
+  }
 }

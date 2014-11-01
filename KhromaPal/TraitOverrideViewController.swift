@@ -11,7 +11,7 @@ import UIKit
 class TraitOverrideViewController: UIViewController {
   override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
     var traitOverride: UITraitCollection?
-    if size.width > 320.0 {
+    if size.width > 414.0 {
       traitOverride = UITraitCollection(horizontalSizeClass: .Regular)
     }
     setOverrideTraitCollection(traitOverride, forChildViewController: childViewControllers[0] as UIViewController)
